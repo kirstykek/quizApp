@@ -1,0 +1,19 @@
+<ion-header>
+ 
+  <ion-toolbar color="warning">
+    <ion-title>
+      <img src="../../assets/quiz/quiz.jpg" width="80" Length="80">Categories
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="warning">
+  <ion-card>
+    <div *ngFor = "let cat of category">
+         <ion-button [routerLink]="['/questions']" shape="round"  color="warning" (click)="setID(cat)"> 
+              {{cat.Category}}
+         </ion-button> 
+      </div>
+    </ion-card> 
+    <ion-button color="warning" shape="round" [routerLink]="['/profile']">Create Profile</ion-button>   
+</ion-content>

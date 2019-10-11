@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar color="warning">
+      <ion-title><img src="../../assets/quiz/signup.jpg" width="200" height="200">REGISTER</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="warning">
+    <ion-card>
+  <ion-header>
+  <ion-input placeholder="Enter name" [(ngModel)]="name">Name</ion-input><br>
+  </ion-header>
+  
+  <ion-header>
+  <ion-input placeholder="Enter email" [(ngModel)]="email" type="email">Email</ion-input><br>
+  </ion-header>
+  
+  <ion-header>
+  <ion-input placeholder="Enter password" [(ngModel)]="password" type="password"> Password</ion-input><br>
+  </ion-header>
+
+  
+  <ion-button color="warning" shape="round" (click)="register()" [routerLink]="['/home']">Save</ion-button>
+</ion-card>
+</ion-content>
+  

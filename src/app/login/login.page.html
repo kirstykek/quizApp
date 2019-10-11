@@ -1,0 +1,32 @@
+<ion-header>
+  
+    <ion-toolbar color="warning">
+      <ion-title><img src="../../assets/quiz/login.jpg" align="center" width="200" height="200"></ion-title><h3>LOGIN</h3>
+      
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="warning">
+ 
+   <ion-card>
+      <ion-card-content>
+      <ion-header>
+      <ion-input [(ngModel)]="email" placeholder="makekokekana@gmail.com" type="email" required>Email:</ion-input><br>
+      </ion-header>
+      </ion-card-content>
+
+      <ion-card-content>
+      <ion-header>
+      <ion-input [(ngModel)]="password" placeholder="Enter Password" type="Password" required>Password:</ion-input>
+      </ion-header>
+    </ion-card-content>
+
+
+  <ion-button color="warning" shape="round" [routerLink]="['/category']" (click)="login()">login</ion-button><br>
+  <ion-button color="warning"  shape="round" (click)="resertPassword()">Forgotpasword</ion-button>
+  <a [routerLink]="['/register']">Click here to Register</a><br>
+  
+</ion-card>
+  
+  
+  </ion-content>
+  

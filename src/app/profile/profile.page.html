@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="warning">Create your user profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img [src]="currentImage" *ngIf="currentImage">
+<ion-fab vertical="top" horizontal="center" colour="warning">
+<ion-fab-button (click)="takepic()"><br>
+  <ion-icon name="logo-instagram" ></ion-icon>
+</ion-fab-button>
+
+ 
+</ion-fab>
+<br>
+<ion-card *ngFor="let usered of used" class="Align">
+  <ion-card-header>
+    <ion-card-subtitle><b><strong>User Information</strong></b></ion-card-subtitle>
+    <div class="ion-padding" class="Align">
+      <img src="../../assets/quiz/quiz.jpg" width="80" height="80">
+    </div>
+    <ion-card-title><b>{{ usered.name }}</b></ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content><b><strong>
+
+    Email:   {{ usered.email }} <br>
+  </strong></b></ion-card-content>
+</ion-card>   <ion-button color="warning" shape="round" [routerLink]="['/login']">back</ion-button>
+<ion-button color="warning" [routerLink]="['/login']" (click)="logout()">logout</ion-button>
+  
+
+</ion-content>

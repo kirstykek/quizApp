@@ -1,0 +1,7 @@
+{
+  "name": "quizzApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
